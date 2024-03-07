@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.75); 
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+    max-width: 1480px;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    font-size: 76px;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    grid-gap: 34px;
+}
+
+.header-link {
+    text-decoration: none;
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+}
+
+.banner {
+    margin-top: 200px;
+    padding: 20px 0 40px;
+    background-image: url('https://assets.unenvironment.org/decadeonrestoration/2020-11/damian-patkowski-T-LfvX-7IVg-unsplash%20%281%29-min_1.jpg');
+    background-size: cover;
+}
+
+.info {
+    margin-top: 20px;
+    width: 520px;
+}
+
+.title {
+    line-height: 110px;
+    font-size: 110px;
+    font-weight: 600;
+}
+
+.text {
+    margin-top: 8px;
+    font-size: 48px;
+    line-height: 68px;
+}
+
+.slider {
+    width: 920px;
+    height: 480px;
+    overflow: hidden;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 920px;
+    height: 130px;
+}
+
+.bar {
+    width: 32px;
+    height: 32px;
+    margin: 16px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    opacity: .5;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+}
+
+.bar:hover {
+    opacity: 1;
+    transform:scale(1.1);
+}
+
+input[name="r"] {
+    width: 0;
+    visibility: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all 0.6s ease;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+#r5:checked ~ .s1 {
+    margin-left: -100%;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin: 0 20px 80px;
+    width: 450px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    background-color: rgb(195, 195, 195);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.card a {
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.card a:hover {
+    width: 100%;
+    height: 100%;
+    scale: 1;
+    transform:scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-feed {
+    margin: 0 20px 60px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    font-size: 48px;
+    padding-left: 4%;
+    background-color: rgb(195, 195, 195);
+}
+
+footer {
+    height: 170px;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    grid-gap: 34px;
+}
+
+.footer-link {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 38px;
+}
+
+.copyright-info {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1620px) {
+    .banner .content {
+        flex-direction: column;
+    }
+
+    .info {
+        width: 100%;
+    }
+    
+    .slider {
+        margin-top: 16px;
+        width: 100%;
+        height: calc(100%);
+    }
+    
+    .navigation {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1140px) {
+    header {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .logo {
+        font-size: 48px;
+    }
+
+    .header-links {
+        grid-gap: 12px;
+    }
+    
+    .header-link {
+        font-size: 24px;
+    }
+    
+    .banner {
+        margin-top: 150px;
+        padding: 20px 0 20px;
+    }
+
+    .banner .content {
+        flex-direction: column;
+    }
+    
+    .info {
+        margin-top: 0px;
+        width: 100%;
+    }
+    
+    .title {
+        line-height: 70px;
+        font-size: 70px;
+    }
+    
+    .text {
+        margin-top: 8px;
+        font-size: 36px;
+        line-height: 36px;
+    }
+    
+    .slider {
+        margin-top: 16px;
+        width: 100%;
+        height: calc(100%);
+    }
+    
+    .navigation {
+        width: 100%;
+        height: 120px;
+    }
+    
+    .bar {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .card {
+        margin: 0 20px 20px;
+        width: 450px;
+        height: 480px;
+        font-size: 36px;
+    }
+    
+    .card-feed {
+        font-size: 36px;
+    }
+    
+    footer {
+        height: 80px;
+    }
+    
+    .footer-links {
+        grid-gap: 10px;
+    }
+    
+    .footer-link {
+        font-size: 24px;
+    }
+    
+    .copyright-info {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 720px) {
+    header {
+        width: 100%;
+        height: 100px;
+    }
+    
+    .logo {
+        font-size: 36px;
+    }
+    
+    .header-links {
+        visibility: hidden;
+    }
+    
+    .banner {
+        margin-top: 100px;
+        padding: 20px 0 20px;
+    }
+
+    .banner .content {
+        flex-direction: column;
+    }
+    
+    .info {
+        margin-top: 0px;
+        width: 100%;
+    }
+    
+    .title {
+        line-height: 50px;
+        font-size: 50px;
+    }
+    
+    .text {
+        margin-top: 8px;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    
+    .slider {
+        margin-top: 16px;
+        width: 100%;
+        height: calc(100%);
+    }
+    
+    .navigation {
+        width: 100%;
+        height: 80px;
+    }
+    
+    .bar {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .card {
+        margin: 0 20px 20px;
+        width: 450px;
+        height: 480px;
+        font-size: 24px;
+    }
+    
+    .card-feed {
+        font-size: 24px;
+    }
+    
+    footer {
+        height: auto;
+    }
+
+    footer .content{
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+    }
+    
+    .footer-link {
+        font-size: 24px;
+    }
+    
+    .copyright-info {
+        margin-top: 20px;
+        font-size: 16px;
+        justify-content: center;
+    }
+}
